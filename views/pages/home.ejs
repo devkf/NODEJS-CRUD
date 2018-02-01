@@ -1,0 +1,36 @@
+
+<%- include('inc/header') %>
+    <main role="main" class="container">
+        <div class="table-responsive-sm">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% drinks.forEach(function(drink) { %>
+                        
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><%= drink.name %></td>
+                            <td><%= drink.drunkness %></td>
+                            <td>
+                                <a href="#" class="btn btn-outline-primary">Add</a>
+                                <a href="#" class="btn btn-outline-danger">Delete</a>
+                                <a href="#" class="btn btn-outline-warning">Edit</a>
+                                
+                            </td>
+                        </tr>
+
+                    <% }); %>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+<%- include('inc/footer') %>
